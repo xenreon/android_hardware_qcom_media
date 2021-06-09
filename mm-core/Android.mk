@@ -54,7 +54,7 @@ LOCAL_SRC_FILES         += src/common/qc_omx_core.c
 ifneq (,$(filter msmnile sdmshrike $(MSMSTEPPE) $(TRINKET) atoll,$(TARGET_BOARD_PLATFORM)))
 LOCAL_SRC_FILES         += src/registry_table_android.c
 else
-LOCAL_SRC_FILES         += src/qc_registry_table_android.c
+LOCAL_SRC_FILES         += src/default/qc_registry_table_android.c
 endif
 
 include $(BUILD_SHARED_LIBRARY)
@@ -87,7 +87,7 @@ LOCAL_SRC_FILES         += src/common/qc_omx_core.c
 ifneq (,$(filter msmnile sdmshrike $(MSMSTEPPE) $(TRINKET) atoll,$(TARGET_BOARD_PLATFORM)))
 LOCAL_SRC_FILES         += src/$(MM_CORE_TARGET)/registry_table.c
 else
-LOCAL_SRC_FILES         += src/$(MM_CORE_TARGET)/qc_registry_table.c
+LOCAL_SRC_FILES         += src/$(MM_CORE_TARGET)/default/qc_registry_table.c
 endif
 
 include $(BUILD_SHARED_LIBRARY)
